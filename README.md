@@ -24,6 +24,20 @@ earnings calls, and reputable financial and business publications.
 - Where data-driven approaches create measurable advantages
 - Patterns and gaps in decision making across different business models
 
+## Scope
+
+**Period:** Fiscal Year 2024
+
+**Markets analyzed:** Brazil and Mexico
+
+**Companies:**
+- Mercado Libre
+- Nubank
+- Amazon LATAM
+
+**Data sources:** Official investor relations reports, SEC filings, 
+central bank publications, and reputable financial media.
+
 ## Tools
 
 Python, SQL, data visualization
