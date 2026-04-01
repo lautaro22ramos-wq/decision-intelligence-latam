@@ -1,0 +1,66 @@
+El objetivo del proyecto
+Querés demostrar que podés combinar conocimiento de negocios con análisis de datos. El proyecto analiza cómo Mercado Libre, Nubank y Amazon LATAM usan datos para tomar decisiones de negocio en Brasil y México durante el año fiscal 2024. No es un proyecto técnico puro — es un proyecto de inteligencia de negocios respaldado por datos.
+
+Las herramientas que vas a usar
+Python es el lenguaje principal. Todo el análisis se escribe en Python.
+Pandas es la librería para manipular datos. Cargás los archivos, limpiás los datos, filtrás, agrupás, calculás métricas. Es el 80% del trabajo.
+Matplotlib y Seaborn son para hacer gráficos. Barras, líneas de tendencia, comparaciones entre empresas.
+Jupyter Notebooks es el entorno donde escribís el código. Cada notebook es un análisis de una empresa.
+Git y GitHub son para versionar y publicar tu trabajo. Cada vez que avanzás, hacés commit y push, y el código queda guardado en GitHub para que cualquier recruiter lo vea.
+Excel y PDF son las fuentes de datos crudos que ya tenés descargados.
+
+La estructura del proyecto
+decision-intelligence-latam/
+├── data/
+│   ├── raw/          → archivos originales sin tocar
+│   └── processed/    → datos limpios listos para analizar
+├── notebooks/
+│   ├── nubank/       → análisis de Nubank
+│   ├── mercadolibre/ → análisis de Mercado Libre
+│   └── amazon/       → análisis de Amazon
+├── reports/
+│   └── figures/      → gráficos exportados
+├── src/              → funciones reutilizables
+└── README.md
+
+El flujo de trabajo completo
+Fase 1 — Extracción de datos
+Los archivos que tenés son PDFs y Excels de reportes financieros oficiales. El primer trabajo es extraer los números relevantes de esos archivos y convertirlos en tablas limpias que Python pueda procesar.
+Para el Excel de Nubank es relativamente directo — pandas puede leer Excel directamente, solo hay que identificar en qué pestaña y fila empiezan los datos reales, que es exactamente el problema que acabamos de encontrar.
+Para los PDFs de Mercado Libre y Amazon es más complejo. Hay dos opciones: extraer los datos manualmente copiando los números a un CSV, o usar una librería llamada pdfplumber que puede extraer tablas de PDFs automáticamente. Para este proyecto la combinación de ambas es lo más práctico.
+Fase 2 — Limpieza de datos
+Los datos financieros reales siempre vienen sucios. Números con comas en lugar de puntos, columnas con nombres raros, filas vacías, monedas mezcladas. Esta fase es limpiar todo eso para que los datos sean consistentes y utilizables.
+Por ejemplo en el Excel de Nubank que acabamos de abrir, la primera pestaña no tiene datos útiles. Hay que apuntar a la pestaña correcta, identificar dónde empiezan los headers reales, y construir un DataFrame limpio.
+Esta fase usa pandas casi exclusivamente.
+Fase 3 — Análisis exploratorio
+Una vez que los datos están limpios, empezás a explorarlos. Preguntas como: ¿cuánto creció el revenue de Nubank en Brasil versus México? ¿Cómo evolucionó el NPL ratio trimestre a trimestre? ¿Qué métricas usa Mercado Libre para medir su negocio de pagos?
+Esto produce estadísticas descriptivas y los primeros gráficos. Cada empresa tiene su propio notebook para esta fase.
+Fase 4 — Análisis comparativo
+Esta es la parte más original y valiosa del proyecto. Tomás las métricas de las tres empresas y las comparás entre sí. Por ejemplo: eficiencia operativa, costo de adquisición de clientes, velocidad de crecimiento en México versus Brasil.
+Acá es donde tu background en consultoría y riesgo hace la diferencia — no es solo mostrar números, es interpretar qué significan esos números para el negocio.
+Fase 5 — Insights y conclusiones
+El output final no es código — es un análisis escrito con gráficos que cualquier persona de negocios puede leer. Vas a escribir esto directamente en los notebooks usando celdas de texto (Markdown), intercaladas con el código y los gráficos.
+Las preguntas que querés responder son: ¿Qué empresa tiene el modelo de decisión más maduro? ¿Dónde están los gaps? ¿Qué puede aprender una empresa de la otra?
+Fase 6 — Publicación
+Cuando el análisis esté terminado, hacés el repositorio público en GitHub y actualizás el README con una descripción clara del proyecto. Ese link es lo que ponés en tu CV y en LinkedIn.
+
+El flujo de trabajo diario
+Cada sesión de trabajo sigue este patrón:
+
+Abrís la consola y navegás a tu carpeta del proyecto
+Ejecutás python -m jupyter notebook
+Abrís el notebook en el que estás trabajando
+Ejecutás todas las celdas desde arriba en orden
+Agregás código nuevo, analizás, iterás
+Cuando terminás hacés commit y push a GitHub con tres comandos:
+
+git add .
+git commit -m "descripción de lo que hiciste"
+git push
+
+Lo que vas a aprender en el proceso
+Pandas a nivel práctico — lectura de archivos, limpieza, agrupación, cálculos. Visualización de datos con matplotlib y seaborn. Git workflow profesional. Cómo estructurar un proyecto de datos real. Y lo más importante — cómo traducir datos financieros en insights de negocio, que es exactamente lo que buscan en Mercado Libre y Globant.
+
+El próximo paso concreto
+Volver al Excel de Nubank, identificar en qué pestaña están los datos reales, y cargarlos correctamente en pandas. Una vez que tengamos ese primer DataFrame limpio, el resto del análisis fluye naturalmente.
+¿Tiene sentido todo esto? ¿Querés que arranquemos con el Excel de Nubank?
