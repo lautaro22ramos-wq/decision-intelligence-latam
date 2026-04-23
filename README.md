@@ -1,6 +1,6 @@
 # decision-intelligence-latam
 How data-driven decisions impact business outcomes in Latin America. A deep analysis of Mercado Libre, Nubank and Amazon LATAM.
-
+aaa
 ## About this project
 
 This is a personal portfolio project where I explore how data shapes 
